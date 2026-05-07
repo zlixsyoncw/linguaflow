@@ -12,7 +12,7 @@ const getClient = () => {
 
 export const generateExercise = async (type: ExerciseType, difficulty: string): Promise<ExerciseContent> => {
   const ai = getClient();
-  const model = "gemini-2.0-flash";
+  const model = "gemini-1.5-flash";
 
   let prompt = "";
   if (type === ExerciseType.GRAMMAR) {
@@ -67,7 +67,7 @@ export const generateExercise = async (type: ExerciseType, difficulty: string): 
 
 export const gradeShortAnswers = async (questions: Question[], answers: Record<number, string>): Promise<Record<number, {correct: boolean, feedback: string}>> => {
     const ai = getClient();
-    const model = "gemini-2.0-flash";
+    const model = "gemini-1.5-flash";
 
     // Filter only short answers that have been answered
     const shortAnswerQuestions = questions.filter(q => q.type === 'short-answer' && answers[q.id]);
@@ -130,7 +130,7 @@ export const gradeShortAnswers = async (questions: Question[], answers: Record<n
 
 export const gradeOralSession = async (transcript: {role: string, text: string}[]): Promise<OralGrade> => {
     const ai = getClient();
-    const model = "gemini-2.0-flash";
+    const model = "gemini-1.5-flash";
 
     const prompt = `You are an expert English Language Examiner (like for IELTS or TOEFL). 
     Analyze the following transcript of a student's conversation with an AI tutor.

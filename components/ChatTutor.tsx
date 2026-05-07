@@ -32,7 +32,7 @@ export const ChatTutor: React.FC = () => {
   const initChat = () => {
       const client = getTutorClient();
       return client.chats.create({
-        model: "gemini-2.0-flash",
+        model: "gemini-1.5-flash",
         config: {
             systemInstruction: "You are an expert English tutor. You are helpful, patient, and correct mistakes politely. Explain grammar rules clearly if asked.",
         }
