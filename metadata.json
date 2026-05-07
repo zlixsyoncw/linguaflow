@@ -1,0 +1,7 @@
+{
+  "name": "LinguaFlow ",
+  "description": "An advanced English tutoring platform powered by Gemini 3, featuring interactive grammar, reading, and real-time oral conversation exercises.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
